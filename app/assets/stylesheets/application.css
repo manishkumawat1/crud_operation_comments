@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+/*
+*=require bloge
+*/
+  .navbar {
+    background-color: #f8f9fa !important; /* Customize navbar background */
+    border-bottom: 2px solid #007bff; /* Add a border at the bottom */
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff !important; /* Change logo text color */
+}
+
+.nav-link {
+    color: #333 !important; /* Default link color */
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff !important; /* Link hover color */
+}
+
+.nav-link.disabled {
+    color: #aaa !important; /* Disabled link color */
+}
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.search-button{
+	display: flex;
+	height: 30px;
+}
+.search-input-type{
+	margin-left: 50px;
+	display: flex;
+	content: inline center;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.styled-table thead {
+  background-color: #009879;
+  color: #ffffff;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+

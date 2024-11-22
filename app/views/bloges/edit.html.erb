@@ -1,0 +1,19 @@
+<h1>New bloge</h1>
+
+<%= form_with model: @bloge do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :discription %><br>
+    <%= form.textarea :discription %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+    
+<% end %>
+

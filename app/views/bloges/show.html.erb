@@ -1,0 +1,35 @@
+<h1><%= @bloge.title %></h1>
+
+<p><%= @bloge.discription   %></p>
+
+<ul>
+  <li><%= link_to "Edit", edit_bloge_path(@bloge) %></li>
+  
+</ul>
+
+<h2>Comments</h2>
+<% @bloge.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+  <p>
+    <strong>comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+
+<h2>Add a comment:</h2>
+<%= form_with model: [ @bloge, @bloge.comments.build] do |form| %>
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.textarea :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
